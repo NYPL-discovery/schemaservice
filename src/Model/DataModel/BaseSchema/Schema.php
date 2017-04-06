@@ -33,6 +33,12 @@ class Schema extends BaseSchema implements MessageInterface, ReadInterface
      */
     public $offsetEnd = 0;
 
+    /**
+     * @SWG\Property(type="object")
+     * @var array
+     */
+    public $schemaObject = [];
+
     public function getSchema()
     {
         return
@@ -51,7 +57,7 @@ class Schema extends BaseSchema implements MessageInterface, ReadInterface
 
     public function getIdFields()
     {
-        return ["id"];
+        return ["id", "schemaObject"];
     }
 
     public function getSequenceId()
@@ -105,5 +111,30 @@ class Schema extends BaseSchema implements MessageInterface, ReadInterface
     public function setOffsetEnd($offsetEnd)
     {
         $this->offsetEnd = (int) $offsetEnd;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSchemaObject()
+    {
+        return $this->schemaObject;
+    }
+
+    /**
+     * @param array $schemaObject
+     */
+    public function setSchemaObject($schemaObject)
+    {
+        $this->schemaObject = $schemaObject;
+    }
+
+    public function setSchema($schema)
+    {
+        parent::setSchema($schema);
+
+        if ($schema) {
+            $this->setSchemaObject(json_decode($schema, true));
+        }
     }
 }
