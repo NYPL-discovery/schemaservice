@@ -148,7 +148,7 @@ final class SchemaController extends Controller
      *         in="path",
      *         name="stream",
      *         required=true,
-     *         type="integer",
+     *         type="string",
      *         format="string"
      *     ),
      *     @SWG\Parameter(
@@ -365,7 +365,7 @@ final class SchemaController extends Controller
      *         in="path",
      *         name="stream",
      *         required=true,
-     *         type="integer",
+     *         type="string",
      *         format="string"
      *     ),
      *     @SWG\Response(
