@@ -900,57 +900,6 @@
         ]
     },
     {
-        "name": "symfony/finder",
-        "version": "v3.3.6",
-        "version_normalized": "3.3.6.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/finder.git",
-            "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/finder/zipball/baea7f66d30854ad32988c11a09d7ffd485810c4",
-            "reference": "baea7f66d30854ad32988c11a09d7ffd485810c4",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9"
-        },
-        "time": "2017-06-01 21:01:25",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.3-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\Finder\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony Finder Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "doctrine/annotations",
         "version": "v1.5.0",
         "version_normalized": "1.5.0.0",
@@ -1073,67 +1022,6 @@
         ]
     },
     {
-        "name": "symfony/polyfill-mbstring",
-        "version": "v1.4.0",
-        "version_normalized": "1.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/polyfill-mbstring.git",
-            "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
-            "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "suggest": {
-            "ext-mbstring": "For best performance"
-        },
-        "time": "2017-06-09 14:24:12",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.4-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Polyfill\\Mbstring\\": ""
-            },
-            "files": [
-                "bootstrap.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Nicolas Grekas",
-                "email": "p@tchwork.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony polyfill for the Mbstring extension",
-        "homepage": "https://symfony.com",
-        "keywords": [
-            "compatibility",
-            "mbstring",
-            "polyfill",
-            "portable",
-            "shim"
-        ]
-    },
-    {
         "name": "aws/aws-sdk-php",
         "version": "3.31.4",
         "version_normalized": "3.31.4.0",
@@ -1216,18 +1104,130 @@
         ]
     },
     {
-        "name": "nypl/microservice-starter",
-        "version": "1.1.2",
-        "version_normalized": "1.1.2.0",
+        "name": "symfony/finder",
+        "version": "v3.3.8",
+        "version_normalized": "3.3.8.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/NYPL/php-microservice-starter.git",
-            "reference": "8ddfd18db873bdb772dec257af4512835dc3bdbc"
+            "url": "https://github.com/symfony/finder.git",
+            "reference": "b2260dbc80f3c4198f903215f91a1ac7fe9fe09e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/NYPL/php-microservice-starter/zipball/8ddfd18db873bdb772dec257af4512835dc3bdbc",
-            "reference": "8ddfd18db873bdb772dec257af4512835dc3bdbc",
+            "url": "https://api.github.com/repos/symfony/finder/zipball/b2260dbc80f3c4198f903215f91a1ac7fe9fe09e",
+            "reference": "b2260dbc80f3c4198f903215f91a1ac7fe9fe09e",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.5.9|>=7.0.8"
+        },
+        "time": "2017-07-29 21:54:42",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Component\\Finder\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony Finder Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "symfony/polyfill-mbstring",
+        "version": "v1.5.0",
+        "version_normalized": "1.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/polyfill-mbstring.git",
+            "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+            "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "suggest": {
+            "ext-mbstring": "For best performance"
+        },
+        "time": "2017-06-14 15:44:48",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Symfony\\Polyfill\\Mbstring\\": ""
+            },
+            "files": [
+                "bootstrap.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Nicolas Grekas",
+                "email": "p@tchwork.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony polyfill for the Mbstring extension",
+        "homepage": "https://symfony.com",
+        "keywords": [
+            "compatibility",
+            "mbstring",
+            "polyfill",
+            "portable",
+            "shim"
+        ]
+    },
+    {
+        "name": "nypl/microservice-starter",
+        "version": "1.1.19",
+        "version_normalized": "1.1.19.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/NYPL/php-microservice-starter.git",
+            "reference": "658bb14d21b8fc647e36fd8af0f84c874a8b4774"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/NYPL/php-microservice-starter/zipball/658bb14d21b8fc647e36fd8af0f84c874a8b4774",
+            "reference": "658bb14d21b8fc647e36fd8af0f84c874a8b4774",
             "shasum": ""
         },
         "require": {
@@ -1240,7 +1240,7 @@
             "vlucas/phpdotenv": "2.4.0",
             "zircote/swagger-php": "2.0.7"
         },
-        "time": "2017-08-14 17:00:43",
+        "time": "2017-09-07 18:33:21",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

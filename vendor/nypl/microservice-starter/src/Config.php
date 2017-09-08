@@ -9,6 +9,7 @@ class Config
     const LOCAL_ENVIRONMENT_FILE = '.env';
     const GLOBAL_ENVIRONMENT_FILE = 'var_app';
     const DEFAULT_TIME_ZONE = 'America/New_York';
+    const CACHE_PREFIX = 'Config:';
 
     protected static $initialized = false;
 
@@ -29,6 +30,7 @@ class Config
     /**
      * @param string $configDirectory
      * @param array $required
+     * @throws APIException
      */
     public static function initialize($configDirectory = '', array $required = [])
     {
@@ -43,7 +45,7 @@ class Config
         self::setInitialized(true);
 
         date_default_timezone_set(
-            Config::get('TIME_ZONE', self::DEFAULT_TIME_ZONE)
+            self::get('TIME_ZONE', self::DEFAULT_TIME_ZONE)
         );
     }
 
@@ -76,9 +78,22 @@ class Config
      * @throws APIException
      * @return bool
      */
+    public static function isLocalEnvironment()
+    {
+        if (self::get('LAMBDA_TASK_ROOT')) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @throws APIException
+     * @return bool
+     */
     protected static function isEncryptedEnvironment()
     {
-        if (Config::get('LAMBDA_TASK_ROOT')) {
+        if (self::get('LAMBDA_TASK_ROOT')) {
             return true;
         }
 
@@ -92,9 +107,19 @@ class Config
      */
     protected static function decryptEnvironmentVariable($name = '')
     {
-        return (string) self::getKeyClient()->decrypt([
+        $cacheKey = self::CACHE_PREFIX . $name;
+
+        if ($decryptedValue = AppCache::get($cacheKey)) {
+            return $decryptedValue;
+        }
+
+        $decryptedValue = (string) self::getKeyClient()->decrypt([
             'CiphertextBlob' => base64_decode(getenv($name)),
         ])['Plaintext'];
+
+        AppCache::set($cacheKey, $decryptedValue);
+
+        return $decryptedValue;
     }
 
     protected static function loadConfiguration()
@@ -181,11 +206,11 @@ class Config
     {
         return new KmsClient([
             'version' => 'latest',
-            'region'  => Config::get('AWS_DEFAULT_REGION'),
+            'region'  => self::get('AWS_DEFAULT_REGION'),
             'credentials' => [
-                'key' => Config::get('AWS_ACCESS_KEY_ID'),
-                'secret' => Config::get('AWS_SECRET_ACCESS_KEY'),
-                'token' => Config::get('AWS_SESSION_TOKEN')
+                'key' => self::get('AWS_ACCESS_KEY_ID'),
+                'secret' => self::get('AWS_SECRET_ACCESS_KEY'),
+                'token' => self::get('AWS_SESSION_TOKEN')
             ]
         ]);
     }
