@@ -112,6 +112,12 @@ $service->get("/swagger", function (Request $request, Response $response) {
 });
 ~~~~
 
+## Contributing / Git Workflow
+
+ * Cut feature branches from `development`. Create a PR against `development`.
+ * After approval, PR author merges into `development`.
+ * Subsequently merge `development` into `qa`, and `qa` into `master`.
+
 ## Deployment
 
 Travis CD is enabled for pushes to `origin/development`, `origin/qa`, and `origin/master` (production).
