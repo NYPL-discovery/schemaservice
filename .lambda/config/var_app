@@ -1,4 +1,0 @@
-TIME_ZONE=America/New_York
-SLACK_CHANNEL=service-logging
-SLACK_USERNAME=SchemaService
-AWS_DEFAULT_REGION=us-east-1
