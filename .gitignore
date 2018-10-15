@@ -2,3 +2,5 @@ node_modules
 dist
 *.swp
 /config/.private
+.lambda
+config/var_local.env
