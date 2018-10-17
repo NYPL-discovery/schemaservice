@@ -7,7 +7,7 @@ use NYPL\Starter\Service;
 use NYPL\Services\Controller;
 use NYPL\Starter\SwaggerGenerator;
 use NYPL\Starter\Config;
-use Monolog\ErrorHandler;
+use NYPL\Starter\ErrorHandler;
 
 try {
     Config::initialize(__DIR__);
