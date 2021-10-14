@@ -12,7 +12,7 @@ php:
 node:
 - 14
 script:
-- composer update
+- composer install
 after_success:
 - ENVIRONMENT_NAME=$TRAVIS_BRANCH
 - if [ "$TRAVIS_BRANCH" == "master" ]; then ENVIRONMENT_NAME=production; fi
