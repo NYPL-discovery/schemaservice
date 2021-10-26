@@ -1,6 +1,6 @@
 language:
-- php
 - node_js
+- php
 install: npm install
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
