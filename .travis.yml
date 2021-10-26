@@ -2,9 +2,6 @@ language:
 - php
 - node_js
 install: npm install
-cache:
-  directories:
-  - node_modules
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
 php:
