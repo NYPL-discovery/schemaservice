@@ -1,16 +1,15 @@
 language:
-- php
 - node_js
+- php
 install: npm install
-cache:
-  directories:
-  - node_modules
 before_deploy:
 - echo "All unit tests passed; Preparing to deploy $TRAVIS_BRANCH"
 php:
 - 7.1
+node:
+- 14
 script:
-- composer update
+- composer install
 after_success:
 - ENVIRONMENT_NAME=$TRAVIS_BRANCH
 - if [ "$TRAVIS_BRANCH" == "master" ]; then ENVIRONMENT_NAME=production; fi

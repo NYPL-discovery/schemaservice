@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/NYPL-discovery/schemaservice.svg?branch=master)](https://travis-ci.org/NYPL-discovery/schemaservice)
 [![Coverage Status](https://coveralls.io/repos/github/NYPL-discovery/schemaservice/badge.svg?branch=travis)](https://coveralls.io/github/NYPL-discovery/schemaservice?branch=travis)
 
-This package is intended to be used as a Lambda-based Node.js/PHP Schema Service using the 
+This package is intended to be used as a Lambda-based Node.js/PHP Schema Service using the
 [NYPL PHP Microservice Starter](https://github.com/NYPL/php-microservice-starter).
 
-This package adheres to [PSR-1](http://www.php-fig.org/psr/psr-1/), 
-[PSR-2](http://www.php-fig.org/psr/psr-2/), and [PSR-4](http://www.php-fig.org/psr/psr-4/) 
+This package adheres to [PSR-1](http://www.php-fig.org/psr/psr-1/),
+[PSR-2](http://www.php-fig.org/psr/psr-2/), and [PSR-4](http://www.php-fig.org/psr/psr-4/)
 (using the [Composer](https://getcomposer.org/) autoloader).
 
 ## Purpose
@@ -23,8 +23,8 @@ This package is deployed as a Lambda to [./index.php](serve) the following Platf
 
 ## Requirements
 
-* Node.js >=6.0
-* PHP >=7.0 
+* Node.js >=14
+* PHP >=7.0
   * [pdo_pdgsql](http://php.net/manual/en/ref.pdo-pgsql.php)
 
 Homebrew is highly recommended for PHP:
@@ -127,3 +127,7 @@ If you need to manually deploy local code, you can use:
 ```
 npm run deploy-[environment]
 ```
+
+## Testing the API
+
+There are some sample requests displayed in `sample_requests`, showing the request and the expected response for each endpoint backed by this lambda. For the POST request, there is a description of the expected side effects and how to check them.
